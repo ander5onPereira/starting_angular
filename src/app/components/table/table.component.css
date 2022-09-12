@@ -1,0 +1,67 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  width: 90%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tbHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contentIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.contentTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contentButton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.tbItem {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.tbItem .title {
+  font-weight: bold;
+  width: 100%;
+}
+
+.tbItem p {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tbFooter {
+  display: flex;
+  justify-content: end;
+  padding: 16px 10px;
+}
+.noUsers{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}

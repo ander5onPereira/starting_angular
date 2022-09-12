@@ -1,0 +1,28 @@
+<div class="table">
+  <div class="tbHeader">
+    <div class="contentIcon">
+      <p>📌</p>
+    </div>
+    <div class="contentTitle">
+      <h4>Title</h4>
+    </div>
+    <div class="contentButton">
+      <app-button></app-button>
+    </div>
+  </div>
+
+  <div *ngIf="users.length>0; else noUsers">
+    <div class="tbItem" >      
+      <p class="title" *ngFor="let title of titles">{{title}}</p>
+    </div>
+    <div class="tbItem" *ngFor="let user of users" >      
+      <p *ngFor="let key of keys">{{ngValue(user,key)}}</p>
+    </div>
+  </div>
+  <ng-template #noUsers >
+    <h4 class="noUsers">Não há asuarios cadastrados</h4>
+  </ng-template>
+  <div class="tbFooter">
+    <p>Total: {{count}}</p>
+  </div>
+</div>
