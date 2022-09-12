@@ -18,4 +18,6 @@ a:hover{
 .active{
   color: #5A3393;
   font-weight: 800;
+  border-bottom: 5px solid #5a3393;
+  padding: 10px 0;
 }

@@ -1,3 +1,3 @@
 <nav class="container">
-  <a *ngFor="let menu of menus"  routerLink={{menu.routerLink}} [ngClass]="menu.active === true ? 'active' : ''" (click)="ngAtive(menu.id)">{{menu.name}}</a>
+  <a *ngFor="let menu of menus"  routerLink={{menu.routerLink}} [ngClass]="menu.active === true ? 'active' : ''" >{{menu.name}}</a>
 </nav>

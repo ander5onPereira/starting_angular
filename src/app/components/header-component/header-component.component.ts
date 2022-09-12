@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-header-component',
   templateUrl: './header-component.component.html',
@@ -20,15 +20,19 @@ export class HeaderComponentComponent implements OnInit {
       active: false,
     },
   ];
-
-  constructor() {}
-  ngOnInit(): void {}
-  ngAtive(id: number): void {
-    this.menus.forEach((item) => {
-      if (item.id === id) {
-        item.active = true;
-      } else {
-        item.active = false;
+  currentRoute: string = '';
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+        this.menus.forEach((item) => {
+          if (item.routerLink === this.currentRoute) {
+            item.active = true;
+          } else {
+            item.active = false;
+          }
+        });
       }
     });
   }
