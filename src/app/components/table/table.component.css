@@ -37,15 +37,15 @@
 
 .tbItem {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 16px 0;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
+  /* width: 100%; */
 }
 
 .tbItem .title {
   font-weight: bold;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .tbItem p {
@@ -64,4 +64,26 @@
   align-items: center;
   justify-content: center;
   height: 20vh;
+}
+.icon{
+  display: flex;
+  width: 6em;
+  margin: 0 0.6em ;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.title .icon{
+  width: 2em;
+}
+.titleTable{
+  font-weight: 800;
+}
+.titleSpace{
+  display: flex;
+  width: 10em;
+  margin: 0 0.6em ;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

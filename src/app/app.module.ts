@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TableComponent } from './components/table/table.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ListComponent } from './components/list/list.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ListComponent } from './components/list/list.component';
     TableComponent,
     ButtonComponent,
     ListComponent,
+    ModalComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

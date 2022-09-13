@@ -13,10 +13,13 @@
 
   <div *ngIf="users.length>0; else noUsers">
     <div class="tbItem" >      
-      <p class="title" *ngFor="let title of titles">{{title}}</p>
+      <p *ngFor="let title of titles" class="titleTable">{{title}}</p>
+      <span class="titleSpace"></span>
+       
     </div>
-    <div class="tbItem" *ngFor="let user of users" >      
+    <div class="tbItem" *ngFor="let user of users">      
       <p *ngFor="let key of keys">{{ngValue(user,key)}}</p>
+      <span class="material-icons icon" (click)="openModal(user.id)">visibility</span> 
     </div>
   </div>
   <ng-template #noUsers >
