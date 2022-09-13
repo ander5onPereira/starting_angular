@@ -15,7 +15,7 @@
 
 .contentIcon {
   display: flex;
-  justify-content: flex-start;
+  justify-content: left;
   align-items: center;
   padding-left: 10px;
   width: 100%;
@@ -30,7 +30,7 @@
 
 .contentButton {
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
   padding: 5px 10px;
   width: 100%;
 }
@@ -56,7 +56,7 @@
 
 .tbFooter {
   display: flex;
-  justify-content: end;
+  justify-content: right;
   padding: 16px 10px;
 }
 .noUsers{

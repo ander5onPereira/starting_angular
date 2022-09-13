@@ -19,7 +19,7 @@
     </div>
     <div class="tbItem" *ngFor="let user of users">      
       <p *ngFor="let key of keys">{{ngValue(user,key)}}</p>
-      <span class="material-icons icon" (click)="openModal(user.id)">visibility</span> 
+      <span class="material-icons icon" (click)="modal.open(user)">visibility</span> 
     </div>
   </div>
   <ng-template #noUsers >
@@ -29,3 +29,5 @@
     <p>Total: {{count}}</p>
   </div>
 </div>
+<app-modal #modal></app-modal>
+

@@ -1,1 +1,41 @@
-<p>modal works!</p>
+<ng-container *ngIf="mostrar">
+  <div class="containerModal" >
+    <div class="headerModal">
+      <app-button (click)="close()" [title]="'X'"></app-button>
+    </div>
+    <div *ngIf="user.hasOwnProperty('id') ===true ; else noUser">
+    <div class="contentText">
+      <strong>Id:</strong>
+      <span>{{user.id}}</span>
+    </div>
+    <div class="contentText">
+      <strong>Nome:</strong>
+      <span>{{user.name}}</span>
+    </div>
+    <div class="contentText">
+      <strong>Email:</strong>
+      <span>{{user.email}}</span>
+    </div>
+    <div class="contentText">
+      <strong>CPF:</strong>
+      <span>{{user.cpf}}</span>
+    </div>
+    <div class="contentText">
+      <strong>Origin do cadastro:</strong>
+      <span>{{user.origin}}</span>
+    </div>
+    <div class="contentText">
+      <strong>Status:</strong>
+      <span>{{user.action}}</span>
+    </div>
+    <div class="footerModal">
+      <app-button (click)="close()" [title]="'Fechar'"></app-button>
+    </div>
+  </div>
+    <ng-content ></ng-content>
+  </div>
+  <ng-template #noUser >
+    <h4 class="noUsers">Não há dados do usuário</h4>
+  </ng-template>
+  <div class="overlay"></div>
+</ng-container>

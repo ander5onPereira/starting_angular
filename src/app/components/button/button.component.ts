@@ -1,5 +1,4 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -7,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent implements OnInit {
-  title = 'Button';
+  @Input() title = 'Button';
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  ngClick(): void {
+  public ngClick(): void {
     console.log('clicou');
   }
 }

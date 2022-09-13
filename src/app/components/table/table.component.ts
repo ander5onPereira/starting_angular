@@ -34,7 +34,4 @@ export class TableComponent implements OnInit {
       this.keys = Object.keys(users.rows[0]);
     });
   }
-  openModal(id: number): void {
-    console.log('ABRIR', id);
-  }
 }

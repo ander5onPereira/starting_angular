@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { Menu } from 'src/app/Menu';
 @Component({
   selector: 'app-header-component',
   templateUrl: './header-component.component.html',
   styleUrls: ['./header-component.component.css'],
 })
 export class HeaderComponentComponent implements OnInit {
-  menus = [
+  menus: Menu[] = [
     {
       id: 0,
       routerLink: '/',
@@ -16,12 +17,14 @@ export class HeaderComponentComponent implements OnInit {
     {
       id: 1,
       routerLink: '/list',
-      name: 'Usuarios',
+      name: 'Usuários',
       active: false,
     },
   ];
   currentRoute: string = '';
+
   constructor(private router: Router) {}
+
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
